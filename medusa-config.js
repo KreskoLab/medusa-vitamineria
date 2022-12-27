@@ -35,6 +35,8 @@ const DATABASE_URL =
 // Medusa uses Redis, so this needs configuration as well
 const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
 
+const PORT = process.env.PORT || 8000;
+
 // Stripe keys
 const STRIPE_API_KEY = process.env.STRIPE_API_KEY || "";
 const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET || "";
@@ -61,6 +63,7 @@ module.exports = {
     store_cors: STORE_CORS,
     admin_cors: ADMIN_CORS,
     redis_url: REDIS_URL,
+    port: PORT,
   },
   plugins,
 };
